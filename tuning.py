@@ -144,7 +144,7 @@ class T5FineTuner(pl.LightningModule):
     return DataLoader(val_dataset, batch_size=self.myparams.eval_batch_size, num_workers=4)
 
 args_dict = dict(
-    output_dir="/content/t5_webnlg", # path to save the checkpoints
+    output_dir="/home/joaquimneto04/t5_webnlg", # path to save the checkpoints
     model_name_or_path='google/byt5-small',
     tokenizer_name_or_path='google/byt5-small',
     max_seq_length=64,
