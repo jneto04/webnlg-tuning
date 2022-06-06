@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 
 def _buid_csv_dataset(split):
-  files = glob.glob(os.getcwd() + "/home/joaquimneto04/data/release_v3.0/en/"+split+"/**/*.xml", recursive=True)
+  files = glob.glob("/home/joaquimneto04/data/release_v3.0/en/"+split+"/**/*.xml", recursive=True)
   triple_re=re.compile('(\d)triples')
   data_dct={}
 
