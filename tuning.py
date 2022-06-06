@@ -257,7 +257,7 @@ class WebNLGDataset(Dataset):
 
 """### Train"""
 
-args_dict.update({'data_dir': '/content/WebNLG', 'output_dir': '/content/t5_webnlg', 'num_train_epochs': 2, 'vocab_file': 'tokenizer_config.json'})
+args_dict.update({'data_dir': '/home/joaquimneto04/WebNLG', 'output_dir': '/home/joaquimneto04/t5_webnlg', 'num_train_epochs': 2, 'vocab_file': 'tokenizer_config.json'})
 args = argparse.Namespace(**args_dict)
 
 # add this in?:
