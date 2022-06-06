@@ -12,6 +12,7 @@ def _buid_csv_dataset(split):
   for f in files:
       tree = ET.parse(f)
       root = tree.getroot()
+      print(triple_re)
       triples_num=int(triple_re.findall(f)[0])
       for sub_root in root:
           for ss_root in sub_root:
