@@ -234,7 +234,7 @@ class WebNLGDataset(Dataset):
     return {"source_ids": source_ids, "source_mask": src_mask, "target_ids": target_ids, "target_mask": target_mask}
 
   def _build_examples_from_files(self):
-      data = pd.read_csv('/content/WebNLG/webNLG2020_'+self.type_path+'.csv')
+      data = pd.read_csv('/home/joaquimneto04/WebNLG/webNLG2020_'+self.type_path+'.csv')
         
       triples = data['input_text'].values.tolist()
       texts = data['target_text'].values.tolist()
