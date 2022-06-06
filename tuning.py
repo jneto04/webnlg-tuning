@@ -145,8 +145,8 @@ class T5FineTuner(pl.LightningModule):
 
 args_dict = dict(
     output_dir="/home/joaquimneto04/t5_webnlg", # path to save the checkpoints
-    model_name_or_path='google/byt5-small',
-    tokenizer_name_or_path='google/byt5-small',
+    model_name_or_path='google/byt5-base',
+    tokenizer_name_or_path='google/byt5-base',
     max_seq_length=64,
     learning_rate=3e-4,
     weight_decay=0.0,
@@ -163,7 +163,7 @@ args_dict = dict(
 )
 
 from transformers import AutoTokenizer
-tokenizer = AutoTokenizer.from_pretrained('google/byt5-small')
+tokenizer = AutoTokenizer.from_pretrained('google/byt5-base')
 
 from torch.utils.data import Dataset, DataLoader
 from random import random
@@ -238,5 +238,5 @@ model = T5FineTuner(args)
 trainer = pl.Trainer(**train_params)
 trainer.fit(model)
 
-model.model.save_pretrained('/home/joaquimneto04/trained_model/t5_small_webnlg')
+model.model.save_pretrained('/home/joaquimneto04/trained_model/t5_base_webnlg')
 model.model.eval()
