@@ -31,8 +31,8 @@ def _buid_csv_dataset(split):
   for st,unst in data_dct.items():
       for i in unst:
           mdata_dct['prefix'].append('webNLG')
-          mdata_dct['input_text'].append(st+' </s>')
-          mdata_dct['target_text'].append(i+' </s>')
+          mdata_dct['input_text'].append(st)
+          mdata_dct['target_text'].append(i)
 
 
   df=pd.DataFrame(mdata_dct)
